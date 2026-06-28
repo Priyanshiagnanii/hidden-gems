@@ -155,10 +155,9 @@ export const GemOfTheWeek: React.FC = () => {
 
   const spotlight = getSpotlightData(gem);
 
-  // Select 3 other destinations to show at the bottom
-  const otherGems = destinations
-    .filter(d => d.id !== gem.id)
-    .slice(0, 3);
+  // Select only the other hand-curated premium "must-visit" destinations
+  const MUST_VISIT_IDS = ['trolltunga', 'waitomo-caves', 'raja-ampat'];
+  const otherGems = destinations.filter(d => MUST_VISIT_IDS.includes(d.id) && d.id !== gem.id);
 
   return (
     <div className="min-h-screen bg-dark-bg text-white relative">
@@ -313,7 +312,7 @@ export const GemOfTheWeek: React.FC = () => {
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className={`grid grid-cols-1 ${otherGems.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'} gap-6`}>
           {otherGems.map((otherGem) => (
             <div
               key={otherGem.id}

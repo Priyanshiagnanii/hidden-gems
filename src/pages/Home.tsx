@@ -29,10 +29,9 @@ export const Home: React.FC = () => {
     setActiveTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  // Select top 3 highest rated destinations as featured
-  const featuredGems = [...destinations]
-    .sort((a, b) => b.rating - a.rating)
-    .slice(0, 3);
+  // Show only the hand-curated premium "must-visit" destinations
+  const MUST_VISIT_IDS = ['trolltunga', 'waitomo-caves', 'raja-ampat'];
+  const featuredGems = destinations.filter(d => MUST_VISIT_IDS.includes(d.id));
 
   // Gem of the Week is Trolltunga
   const gemOfTheWeek = destinations.find(d => d.id === 'trolltunga') || destinations[0];
