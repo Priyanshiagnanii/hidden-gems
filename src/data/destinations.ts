@@ -230,8 +230,8 @@ export const destinations: Destination[] = [
     image: "/havasu_falls_cover.png",
     galleryImages: [
       "/havasu_falls_cover.png",
-      "/antelope_canyon.png",
-      "/bisti_wilderness.png"
+      "/havasu_falls_gallery1.png",
+      "/havasu_falls_gallery2.png"
     ],
     bestTime: "March to May & September to November",
     highlights: [
