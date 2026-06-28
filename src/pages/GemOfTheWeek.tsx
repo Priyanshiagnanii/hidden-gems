@@ -611,6 +611,30 @@ export const GemOfTheWeek: React.FC = () => {
           </div>
         </div>
 
+        {/* GALLERY SECTION */}
+        <div className="mb-16">
+          <div className="flex flex-col gap-2 mb-8">
+            <span className="text-[10px] tracking-[0.3em] uppercase text-accent-blue-400 font-semibold font-sans">
+              Visual Insights
+            </span>
+            <h3 className="font-serif text-2xl md:text-3xl font-bold">
+              Captured <span className="blue-gradient-text">Moments</span>
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {gem.galleryImages.map((img, idx) => (
+              <div key={idx} className="aspect-[4/3] rounded-2xl overflow-hidden glass-panel border-accent-blue-500/10 group relative">
+                <img
+                  src={img}
+                  alt={`${gem.name} Gallery ${idx + 1}`}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* DAY BY DAY LOGS */}
         <div className="mb-16">
           <div className="flex flex-col gap-2 mb-8">
