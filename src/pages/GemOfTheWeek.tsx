@@ -343,8 +343,7 @@ export const GemOfTheWeek: React.FC = () => {
               <div
                 key={otherGem.id}
                 onClick={() => {
-                  navigate(`/gem-of-the-week?id=${otherGem.id}`);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  navigate(`/explore?gem=${otherGem.id}`);
                 }}
                 className="shrink-0 w-72 h-80 glass-panel glass-panel-hover rounded-2xl overflow-hidden cursor-pointer flex flex-col group relative transition-all duration-500 hover:scale-[1.05] hover:z-20 hover:shadow-2xl hover:shadow-accent-blue-500/10 hover:border-accent-blue-400/40"
               >
