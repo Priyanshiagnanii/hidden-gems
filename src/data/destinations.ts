@@ -33,9 +33,9 @@ export const destinations: Destination[] = [
     rating: 4.9,
     image: "https://upload.wikimedia.org/wikipedia/commons/c/ca/Glowworm_Grotto%2C_Waitomo_Glowworm_Cave.jpg", // Standard beautiful ocean/cave lighting
     galleryImages: [
-      "/plitvice_lakes_real.jpg",
-      "/lake_malawi_real.png",
-      "/perhentian_islands_real.png"
+      "https://upload.wikimedia.org/wikipedia/commons/c/ca/Glowworm_Grotto%2C_Waitomo_Glowworm_Cave.jpg",
+      "/waitomo_gallery1.png",
+      "/waitomo_gallery2.png"
     ],
     bestTime: "November to April",
     highlights: [
@@ -62,8 +62,9 @@ export const destinations: Destination[] = [
     image: "/lencois_new_cover.png",
     galleryImages: [
       "/lencois_new_cover.png",
-      "/erta_ale_real.png",
-      "/danakil_real.png"
+      "/lencois_gallery1.jpg",
+      "/lencois_gallery2.jpg",
+      "/lencois_gallery3.jpg"
     ],
     bestTime: "June to August",
     highlights: [
@@ -89,9 +90,7 @@ export const destinations: Destination[] = [
     rating: 4.7,
     image: "/derinkuyu_real.jpg",
     galleryImages: [
-      "/derinkuyu_real.jpg",
-      "/hegra_real.jpg",
-      "/meteora_real.jpg"
+      "/derinkuyu_real.jpg"
     ],
     bestTime: "April to October",
     highlights: [
@@ -118,8 +117,8 @@ export const destinations: Destination[] = [
     image: "/svalbard_real.png",
     galleryImages: [
       "/svalbard_real.png",
-      "/scoresby_sund_real.png",
-      "/lemaire_channel_real.png"
+      "/svalbard_gallery1.png",
+      "/svalbard_gallery2.png"
     ],
     bestTime: "December to February (Aurora) or June (Midnight Sun)",
     highlights: [
@@ -145,9 +144,7 @@ export const destinations: Destination[] = [
     rating: 4.6,
     image: "/tsingy_real.jpg",
     galleryImages: [
-      "/tsingy_real.jpg",
-      "/yakushima_real.png",
-      "/plitvice_lakes_real.jpg"
+      "/tsingy_real.jpg"
     ],
     bestTime: "May to October (Dry season)",
     highlights: [
@@ -173,9 +170,7 @@ export const destinations: Destination[] = [
     rating: 4.8,
     image: "/hegra_real.jpg",
     galleryImages: [
-      "/hegra_real.jpg",
-      "/derinkuyu_real.jpg",
-      "/meteora_real.jpg"
+      "/hegra_real.jpg"
     ],
     bestTime: "October to April",
     highlights: [
@@ -201,9 +196,7 @@ export const destinations: Destination[] = [
     rating: 4.9,
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/1_jiuzhaigou_valley_wu_hua_hai_2011b.jpg/3840px-1_jiuzhaigou_valley_wu_hua_hai_2011b.jpg",
     galleryImages: [
-      "/yakushima_real.png",
-      "/plitvice_lakes_real.jpg",
-      "/spiti_valley_real.png"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/1_jiuzhaigou_valley_wu_hua_hai_2011b.jpg/3840px-1_jiuzhaigou_valley_wu_hua_hai_2011b.jpg"
     ],
     bestTime: "October (for autumn foliage colors)",
     highlights: [
@@ -257,9 +250,7 @@ export const destinations: Destination[] = [
     rating: 4.8,
     image: "https://upload.wikimedia.org/wikipedia/commons/8/80/Cascade_Pass_and_Pelton_Basin.jpg",
     galleryImages: [
-      "/yakushima_real.png",
-      "/plitvice_lakes_real.jpg",
-      "/spiti_valley_real.png"
+      "https://upload.wikimedia.org/wikipedia/commons/8/80/Cascade_Pass_and_Pelton_Basin.jpg"
     ],
     bestTime: "Mid-June to late September",
     highlights: [
@@ -285,9 +276,7 @@ export const destinations: Destination[] = [
     rating: 4.7,
     image: "/great_sand_dunes_cover.png",
     galleryImages: [
-      "/great_sand_dunes_cover.png",
-      "/erta_ale_real.png",
-      "/danakil_real.png"
+      "/great_sand_dunes_cover.png"
     ],
     bestTime: "May to September",
     highlights: [
@@ -314,8 +303,7 @@ export const destinations: Destination[] = [
     image: "/cumberland_cover.png",
     galleryImages: [
       "/cumberland_cover.png",
-      "/raja_ampat_real.png",
-      "/faroe_islands_real.jpg"
+      "/cumberland_real.png"
     ],
     bestTime: "October to April",
     highlights: [
@@ -341,9 +329,7 @@ export const destinations: Destination[] = [
     rating: 4.9,
     image: "/faroe_islands_real.jpg",
     galleryImages: [
-      "/faroe_islands_real.jpg",
-      "/lofoten_islands_real.jpg",
-      "/trolltunga_real.png"
+      "/faroe_islands_real.jpg"
     ],
     bestTime: "June to August",
     highlights: [
@@ -369,9 +355,7 @@ export const destinations: Destination[] = [
     rating: 4.9,
     image: "/lofoten_islands_real.jpg",
     galleryImages: [
-      "/lofoten_islands_real.jpg",
-      "/faroe_islands_real.jpg",
-      "/trolltunga_real.png"
+      "/lofoten_islands_real.jpg"
     ],
     bestTime: "September to April (Northern Lights) or June to August (Midnight Sun)",
     highlights: [
@@ -397,9 +381,7 @@ export const destinations: Destination[] = [
     rating: 4.8,
     image: "/meteora_real.jpg",
     galleryImages: [
-      "/meteora_real.jpg",
-      "/hegra_real.jpg",
-      "/derinkuyu_real.jpg"
+      "/meteora_real.jpg"
     ],
     bestTime: "September to November or April to June",
     highlights: [
@@ -425,9 +407,7 @@ export const destinations: Destination[] = [
     rating: 4.8,
     image: "/azores_real.jpg",
     galleryImages: [
-      "/azores_real.jpg",
-      "/erta_ale_real.png",
-      "/danakil_real.png"
+      "/azores_real.jpg"
     ],
     bestTime: "June to September",
     highlights: [
@@ -453,9 +433,7 @@ export const destinations: Destination[] = [
     rating: 4.9,
     image: "/plitvice_lakes_real.jpg",
     galleryImages: [
-      "/plitvice_lakes_real.jpg",
-      "/yakushima_real.png",
-      "/lake_malawi_real.png"
+      "/plitvice_lakes_real.jpg"
     ],
     bestTime: "May to September",
     highlights: [
@@ -482,8 +460,8 @@ export const destinations: Destination[] = [
     image: "/trolltunga_real.png",
     galleryImages: [
       "/trolltunga_real.png",
-      "/lofoten_islands_real.jpg",
-      "/faroe_islands_real.jpg"
+      "/trolltunga_gallery1.png",
+      "/trolltunga_gallery2.png"
     ],
     bestTime: "Late June to September",
     highlights: [
@@ -510,9 +488,8 @@ export const destinations: Destination[] = [
     rating: 4.7,
     image: "/cape_may_real.jpg",
     galleryImages: [
-      "/cape_may_real.jpg",
-      "/raja_ampat_real.png",
-      "/faroe_islands_real.jpg"
+      "/cape_may_cover.png",
+      "/cape_may_real.png"
     ],
     bestTime: "May to September",
     highlights: [
@@ -539,8 +516,8 @@ export const destinations: Destination[] = [
     image: "/raja_ampat_real.png",
     galleryImages: [
       "/raja_ampat_real.png",
-      "/perhentian_islands_real.png",
-      "/bazaruto_real.png"
+      "/raja_ampat_gallery1.png",
+      "/raja_ampat_gallery2.png"
     ],
     bestTime: "October to April",
     highlights: [
@@ -566,9 +543,7 @@ export const destinations: Destination[] = [
     rating: 4.9,
     image: "/socotra_real.jpg",
     galleryImages: [
-      "/socotra_real.jpg",
-      "/afar_salt_caravan_real.png",
-      "/danakil_real.png"
+      "/socotra_real.jpg"
     ],
     bestTime: "October to April",
     highlights: [
@@ -594,9 +569,7 @@ export const destinations: Destination[] = [
     rating: 4.8,
     image: "/yakushima_real.png",
     galleryImages: [
-      "/yakushima_real.png",
-      "/plitvice_lakes_real.jpg",
-      "/spiti_valley_real.png"
+      "/yakushima_real.png"
     ],
     bestTime: "May to October",
     highlights: [
@@ -622,9 +595,7 @@ export const destinations: Destination[] = [
     rating: 4.9,
     image: "/spiti_valley_real.png",
     galleryImages: [
-      "/spiti_valley_real.png",
-      "/hegra_real.jpg",
-      "/derinkuyu_real.jpg"
+      "/spiti_valley_real.png"
     ],
     bestTime: "June to September",
     highlights: [
@@ -650,9 +621,7 @@ export const destinations: Destination[] = [
     rating: 4.8,
     image: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Phou_si_Luang_Prabang_Laos_%E3%83%97%E3%83%BC%E3%82%B7%E3%83%BC%E3%81%AE%E4%B8%98_%E3%83%A9%E3%82%AA%E3%82%B9%E3%83%BB%E3%83%AB%E3%82%A2%E3%83%B3%E3%83%97%E3%83%A9%E3%83%90%E3%83%BC%E3%83%B3_DSCF6777.jpg",
     galleryImages: [
-      "/hegra_real.jpg",
-      "/derinkuyu_real.jpg",
-      "/meteora_real.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/f/f7/Phou_si_Luang_Prabang_Laos_%E3%83%97%E3%83%BC%E3%82%B7%E3%83%BC%E3%81%AE%E4%B8%98_%E3%83%A9%E3%82%AA%E3%82%B9%E3%83%BB%E3%83%AB%E3%82%A2%E3%83%B3%E3%83%97%E3%83%A9%E3%83%90%E3%83%BC%E3%83%B3_DSCF6777.jpg"
     ],
     bestTime: "November to February",
     highlights: [
@@ -678,9 +647,7 @@ export const destinations: Destination[] = [
     rating: 4.8,
     image: "https://upload.wikimedia.org/wikipedia/commons/d/d0/2012_Bukhara_7515821196_cropped.jpg",
     galleryImages: [
-      "/hegra_real.jpg",
-      "/derinkuyu_real.jpg",
-      "/meteora_real.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/d/d0/2012_Bukhara_7515821196_cropped.jpg"
     ],
     bestTime: "April to June & September to November",
     highlights: [
@@ -706,9 +673,7 @@ export const destinations: Destination[] = [
     rating: 4.8,
     image: "https://upload.wikimedia.org/wikipedia/commons/0/09/Jiuqudong_2003-01.jpg",
     galleryImages: [
-      "/yakushima_real.png",
-      "/plitvice_lakes_real.jpg",
-      "/spiti_valley_real.png"
+      "https://upload.wikimedia.org/wikipedia/commons/0/09/Jiuqudong_2003-01.jpg"
     ],
     bestTime: "October to April",
     highlights: [
@@ -734,9 +699,7 @@ export const destinations: Destination[] = [
     rating: 4.7,
     image: "/perhentian_islands_real.png",
     galleryImages: [
-      "/perhentian_islands_real.png",
-      "/raja_ampat_real.png",
-      "/faroe_islands_real.jpg"
+      "/perhentian_islands_real.png"
     ],
     bestTime: "March to October (Islands close during monsoon season)",
     highlights: [
@@ -762,9 +725,7 @@ export const destinations: Destination[] = [
     rating: 4.9,
     image: "https://upload.wikimedia.org/wikipedia/commons/0/07/Mt_Cook_LC0247.jpg",
     galleryImages: [
-      "/svalbard_real.png",
-      "/scoresby_sund_real.png",
-      "/lemaire_channel_real.png"
+      "https://upload.wikimedia.org/wikipedia/commons/0/07/Mt_Cook_LC0247.jpg"
     ],
     bestTime: "November to April",
     highlights: [
@@ -790,9 +751,7 @@ export const destinations: Destination[] = [
     rating: 4.9,
     image: "/deadvlei_real.png",
     galleryImages: [
-      "/deadvlei_real.png",
-      "/danakil_real.png",
-      "/afar_salt_caravan_real.png"
+      "/deadvlei_real.png"
     ],
     bestTime: "May to September",
     highlights: [
@@ -818,9 +777,7 @@ export const destinations: Destination[] = [
     rating: 4.8,
     image: "/danakil_real.png",
     galleryImages: [
-      "/danakil_real.png",
-      "/erta_ale_real.png",
-      "/afar_salt_caravan_real.png"
+      "/danakil_real.png"
     ],
     bestTime: "November to February (Cooler winter months)",
     highlights: [
@@ -847,8 +804,8 @@ export const destinations: Destination[] = [
     image: "/musandam_cover_real.png",
     galleryImages: [
       "/musandam_cover_real.png",
-      "/raja_ampat_real.png",
-      "/faroe_islands_real.jpg"
+      "/musandam_aerial_real.png",
+      "/musandam_island_real.png"
     ],
     bestTime: "November to March",
     highlights: [
@@ -874,9 +831,7 @@ export const destinations: Destination[] = [
     rating: 4.8,
     image: "/bazaruto_real.png",
     galleryImages: [
-      "/bazaruto_real.png",
-      "/raja_ampat_real.png",
-      "/faroe_islands_real.jpg"
+      "/bazaruto_real.png"
     ],
     bestTime: "May to November",
     highlights: [
@@ -902,9 +857,7 @@ export const destinations: Destination[] = [
     rating: 4.8,
     image: "https://upload.wikimedia.org/wikipedia/commons/e/e6/NubianMeroePyramids30sep2005%282%29.jpg",
     galleryImages: [
-      "/hegra_real.jpg",
-      "/derinkuyu_real.jpg",
-      "/meteora_real.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/e/e6/NubianMeroePyramids30sep2005%282%29.jpg"
     ],
     bestTime: "November to February",
     highlights: [
@@ -930,9 +883,7 @@ export const destinations: Destination[] = [
     rating: 4.7,
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Dunst_Oman_scan0322_-_Burj_al_Nahda.jpg/3840px-Dunst_Oman_scan0322_-_Burj_al_Nahda.jpg",
     galleryImages: [
-      "/yakushima_real.png",
-      "/plitvice_lakes_real.jpg",
-      "/spiti_valley_real.png"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Dunst_Oman_scan0322_-_Burj_al_Nahda.jpg/3840px-Dunst_Oman_scan0322_-_Burj_al_Nahda.jpg"
     ],
     bestTime: "July to September (Khareef season) or October to April",
     highlights: [
@@ -958,9 +909,7 @@ export const destinations: Destination[] = [
     rating: 4.9,
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lalibela%2C_san_giorgio%2C_esterno_24.jpg/3840px-Lalibela%2C_san_giorgio%2C_esterno_24.jpg",
     galleryImages: [
-      "/hegra_real.jpg",
-      "/derinkuyu_real.jpg",
-      "/meteora_real.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lalibela%2C_san_giorgio%2C_esterno_24.jpg/3840px-Lalibela%2C_san_giorgio%2C_esterno_24.jpg"
     ],
     bestTime: "October to March",
     highlights: [
@@ -986,9 +935,7 @@ export const destinations: Destination[] = [
     rating: 4.8,
     image: "/lake_malawi_real.png",
     galleryImages: [
-      "/lake_malawi_real.png",
-      "/raja_ampat_real.png",
-      "/faroe_islands_real.jpg"
+      "/lake_malawi_real.png"
     ],
     bestTime: "May to October",
     highlights: [
@@ -1014,9 +961,7 @@ export const destinations: Destination[] = [
     rating: 4.9,
     image: "https://upload.wikimedia.org/wikipedia/commons/5/56/Mountain_in_Wadi_Rum%2C_Jordan.jpg",
     galleryImages: [
-      "/erta_ale_real.png",
-      "/danakil_real.png",
-      "/afar_salt_caravan_real.png"
+      "https://upload.wikimedia.org/wikipedia/commons/5/56/Mountain_in_Wadi_Rum%2C_Jordan.jpg"
     ],
     bestTime: "March to May & September to November",
     highlights: [
@@ -1042,9 +987,7 @@ export const destinations: Destination[] = [
     rating: 4.9,
     image: "/south_georgia_real.png",
     galleryImages: [
-      "/south_georgia_real.png",
-      "/lemaire_channel_real.png",
-      "/svalbard_real.png"
+      "/south_georgia_real.png"
     ],
     bestTime: "November to March (Southern Summer)",
     highlights: [
@@ -1070,9 +1013,7 @@ export const destinations: Destination[] = [
     rating: 4.9,
     image: "/scoresby_sund_real.png",
     galleryImages: [
-      "/scoresby_sund_real.png",
-      "/svalbard_real.png",
-      "/lemaire_channel_real.png"
+      "/scoresby_sund_real.png"
     ],
     bestTime: "July to September",
     highlights: [
@@ -1098,9 +1039,7 @@ export const destinations: Destination[] = [
     rating: 4.9,
     image: "https://upload.wikimedia.org/wikipedia/commons/4/40/Deception_island.jpg",
     galleryImages: [
-      "/erta_ale_real.png",
-      "/danakil_real.png",
-      "/afar_salt_caravan_real.png"
+      "https://upload.wikimedia.org/wikipedia/commons/4/40/Deception_island.jpg"
     ],
     bestTime: "December to February",
     highlights: [
@@ -1126,9 +1065,7 @@ export const destinations: Destination[] = [
     rating: 4.9,
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/%D0%9D%D0%B8%D0%B7%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%8C_%D0%BD%D0%B0%D0%B4_%D0%A1%D0%BE%D0%BC%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%BC%D0%B8_%D0%B3%D0%BE%D1%80%D0%B0%D0%BC%D0%B8.jpg/3840px-%D0%9D%D0%B8%D0%B7%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%8C_%D0%BD%D0%B0%D0%B4_%D0%A1%D0%BE%D0%BC%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%BC%D0%B8_%D0%B3%D0%BE%D1%80%D0%B0%D0%BC%D0%B8.jpg",
     galleryImages: [
-      "/raja_ampat_real.png",
-      "/faroe_islands_real.jpg",
-      "/lofoten_islands_real.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/%D0%9D%D0%B8%D0%B7%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%8C_%D0%BD%D0%B0%D0%B4_%D0%A1%D0%BE%D0%BC%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%BC%D0%B8_%D0%B3%D0%BE%D1%80%D0%B0%D0%BC%D0%B8.jpg/3840px-%D0%9D%D0%B8%D0%B7%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%8C_%D0%BD%D0%B0%D0%B4_%D0%A1%D0%BE%D0%BC%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%BC%D0%B8_%D0%B3%D0%BE%D1%80%D0%B0%D0%BC%D0%B8.jpg"
     ],
     bestTime: "August",
     highlights: [
@@ -1154,9 +1091,7 @@ export const destinations: Destination[] = [
     rating: 4.8,
     image: "/baffin_island_real.png",
     galleryImages: [
-      "/baffin_island_real.png",
-      "/raja_ampat_real.png",
-      "/faroe_islands_real.jpg"
+      "/baffin_island_real.png"
     ],
     bestTime: "July to August (Hiking) or March to May (Winter travel)",
     highlights: [
@@ -1182,9 +1117,7 @@ export const destinations: Destination[] = [
     rating: 4.9,
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Disko-bay-icebergs.jpg/3840px-Disko-bay-icebergs.jpg",
     galleryImages: [
-      "/raja_ampat_real.png",
-      "/faroe_islands_real.jpg",
-      "/lofoten_islands_real.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Disko-bay-icebergs.jpg/3840px-Disko-bay-icebergs.jpg"
     ],
     bestTime: "June to September",
     highlights: [
@@ -1210,9 +1143,7 @@ export const destinations: Destination[] = [
     rating: 4.9,
     image: "/lemaire_channel_real.png",
     galleryImages: [
-      "/lemaire_channel_real.png",
-      "/south_georgia_real.png",
-      "/scoresby_sund_real.png"
+      "/lemaire_channel_real.png"
     ],
     bestTime: "December to February",
     highlights: [
@@ -1238,9 +1169,7 @@ export const destinations: Destination[] = [
     rating: 4.8,
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Churchill%2C_Manitoba_%282010%29.jpg/3840px-Churchill%2C_Manitoba_%282010%29.jpg",
     galleryImages: [
-      "/raja_ampat_real.png",
-      "/faroe_islands_real.jpg",
-      "/lofoten_islands_real.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Churchill%2C_Manitoba_%282010%29.jpg/3840px-Churchill%2C_Manitoba_%282010%29.jpg"
     ],
     bestTime: "October to November (Bears) or July to August (Beluga whales & Aurora)",
     highlights: [
@@ -1266,9 +1195,7 @@ export const destinations: Destination[] = [
     rating: 4.9,
     image: "https://upload.wikimedia.org/wikipedia/commons/3/34/Arctic_circle_santa_village.jpg",
     galleryImages: [
-      "/svalbard_real.png",
-      "/scoresby_sund_real.png",
-      "/lemaire_channel_real.png"
+      "https://upload.wikimedia.org/wikipedia/commons/3/34/Arctic_circle_santa_village.jpg"
     ],
     bestTime: "December to March",
     highlights: [
@@ -1294,9 +1221,7 @@ export const destinations: Destination[] = [
     rating: 4.8,
     image: "/bisti_wilderness.png",
     galleryImages: [
-      "/bisti_wilderness.png",
-      "/erta_ale_real.png",
-      "/danakil_real.png"
+      "/bisti_wilderness.png"
     ],
     bestTime: "September to November & March to May",
     highlights: [
@@ -1322,9 +1247,7 @@ export const destinations: Destination[] = [
     rating: 4.7,
     image: "/marfa_cover.png",
     galleryImages: [
-      "/marfa_cover.png",
-      "/svalbard_real.png",
-      "/scoresby_sund_real.png"
+      "/marfa_cover.png"
     ],
     bestTime: "October to April",
     highlights: [
@@ -1350,9 +1273,7 @@ export const destinations: Destination[] = [
     rating: 4.6,
     image: "/salvation_mountain.png",
     galleryImages: [
-      "/salvation_mountain.png",
-      "/erta_ale_real.png",
-      "/danakil_real.png"
+      "/salvation_mountain.png"
     ],
     bestTime: "November to March",
     highlights: [
@@ -1378,9 +1299,7 @@ export const destinations: Destination[] = [
     rating: 4.9,
     image: "/antelope_canyon.png",
     galleryImages: [
-      "/antelope_canyon.png",
-      "/havasu_falls_cover.png",
-      "/marfa.png"
+      "/antelope_canyon.png"
     ],
     bestTime: "May to September (for midday light beams)",
     highlights: [
@@ -1406,9 +1325,7 @@ export const destinations: Destination[] = [
     rating: 4.8,
     image: "/giants_causeway.png",
     galleryImages: [
-      "/giants_causeway.png",
-      "/erta_ale_real.png",
-      "/danakil_real.png"
+      "/giants_causeway.png"
     ],
     bestTime: "May to September",
     highlights: [
