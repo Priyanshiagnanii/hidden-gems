@@ -391,24 +391,6 @@ export const Explore: React.FC = () => {
                         ))}
                       </ul>
                     </div>
-
-                    {/* Sub-gallery images */}
-                    <div className="flex flex-col gap-3 pt-4 border-t border-accent-blue-500/10">
-                      <span className="text-xs uppercase tracking-widest text-accent-blue-400 font-bold">
-                        Photos
-                      </span>
-                      <div className="grid grid-cols-3 gap-3 mt-1">
-                        {activeGem.galleryImages.map((img, idx) => (
-                          <div key={idx} className="aspect-square rounded-xl overflow-hidden border border-white/5 group relative">
-                            <img
-                              src={img}
-                              alt="Gallery Preview"
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-zoom-in"
-                            />
-                          </div>
-                        ))}
-                      </div>
-                    </div>
                   </div>
 
                   {/* Right Column: Parameters and Booking */}
