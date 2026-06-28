@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { Calendar, Clock, MapPin, Compass, ArrowRight, Quote, ShieldCheck } from 'lucide-react';
+import { Calendar, Clock, MapPin, Compass, ArrowRight, Quote, ShieldCheck, ChevronLeft, ChevronRight } from 'lucide-react';
 import { destinations } from '../data/destinations';
 
 const spotlightsData: Record<string, {
@@ -148,6 +148,19 @@ export const GemOfTheWeek: React.FC = () => {
 
   const [activeDay, setActiveDay] = useState(0);
 
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (sliderRef.current) {
+      const { scrollLeft, clientWidth } = sliderRef.current;
+      const scrollAmount = clientWidth * 0.75;
+      sliderRef.current.scrollTo({
+        left: direction === 'left' ? scrollLeft - scrollAmount : scrollLeft + scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   // Reset active day when the spotlight destination changes
   useEffect(() => {
     setActiveDay(0);
@@ -155,9 +168,8 @@ export const GemOfTheWeek: React.FC = () => {
 
   const spotlight = getSpotlightData(gem);
 
-  // Select only the other hand-curated premium "must-visit" destinations
-  const MUST_VISIT_IDS = ['trolltunga', 'waitomo-caves', 'raja-ampat'];
-  const otherGems = destinations.filter(d => MUST_VISIT_IDS.includes(d.id) && d.id !== gem.id);
+  // Select must-visit destinations (rating === 4.9 and local image) to show in the slideshow
+  const otherGems = destinations.filter(d => d.rating === 4.9 && d.image.startsWith('/') && d.id !== gem.id);
 
   return (
     <div className="min-h-screen bg-dark-bg text-white relative">
@@ -302,7 +314,7 @@ export const GemOfTheWeek: React.FC = () => {
       </section>
 
       {/* MORE SPOTLIGHTS SECTION */}
-      <section className="py-16 px-6 md:px-12 max-w-4xl mx-auto border-t border-accent-blue-500/10">
+      <section className="py-16 px-6 md:px-12 max-w-6xl mx-auto border-t border-accent-blue-500/10">
         <div className="flex flex-col gap-2 mb-8">
           <span className="text-[10px] tracking-[0.3em] uppercase text-accent-blue-400 font-semibold font-sans">
             Curated Spotlights
@@ -312,35 +324,59 @@ export const GemOfTheWeek: React.FC = () => {
           </h3>
         </div>
 
-        <div className={`grid grid-cols-1 ${otherGems.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'} gap-6`}>
-          {otherGems.map((otherGem) => (
-            <div
-              key={otherGem.id}
-              onClick={() => {
-                navigate(`/gem-of-the-week?id=${otherGem.id}`);
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="glass-panel glass-panel-hover rounded-2xl overflow-hidden cursor-pointer flex flex-col group h-72 relative transition-all"
-            >
-              <img
-                src={otherGem.image}
-                alt={otherGem.name}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 brightness-[0.4] group-hover:brightness-[0.3]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-transparent" />
-              <div className="absolute inset-0 p-5 flex flex-col justify-end gap-1.5 z-10">
-                <span className="text-[9px] uppercase tracking-wider text-accent-blue-400 font-sans">
-                  {otherGem.region}
-                </span>
-                <h4 className="font-serif text-lg text-white group-hover:text-accent-blue-300 transition-colors">
-                  {otherGem.name}
-                </h4>
-                <p className="text-[11px] text-gray-400 font-light line-clamp-2 leading-relaxed font-sans">
-                  {otherGem.tagline}
-                </p>
+        <div className="relative group/slider">
+          {/* Left Navigation Arrow */}
+          <button
+            onClick={() => scroll('left')}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-30 w-12 h-[75%] bg-black/60 hover:bg-black/85 text-white flex items-center justify-center rounded-r-2xl border-y border-r border-accent-blue-500/15 opacity-0 group-hover/slider:opacity-100 transition-all duration-300 cursor-pointer backdrop-blur-sm"
+            aria-label="Scroll left"
+          >
+            <ChevronLeft className="w-8 h-8 text-accent-blue-400 hover:text-white transition-colors" />
+          </button>
+
+          {/* Scroll Track */}
+          <div
+            ref={sliderRef}
+            className="flex gap-6 overflow-x-auto scrollbar-none py-4 px-2 scroll-smooth"
+          >
+            {otherGems.map((otherGem) => (
+              <div
+                key={otherGem.id}
+                onClick={() => {
+                  navigate(`/gem-of-the-week?id=${otherGem.id}`);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="shrink-0 w-72 h-80 glass-panel glass-panel-hover rounded-2xl overflow-hidden cursor-pointer flex flex-col group relative transition-all duration-500 hover:scale-[1.05] hover:z-20 hover:shadow-2xl hover:shadow-accent-blue-500/10 hover:border-accent-blue-400/40"
+              >
+                <img
+                  src={otherGem.image}
+                  alt={otherGem.name}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-[0.4] group-hover:brightness-[0.3]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-transparent" />
+                <div className="absolute inset-0 p-5 flex flex-col justify-end gap-1.5 z-10">
+                  <span className="text-[9px] uppercase tracking-wider text-accent-blue-400 font-sans">
+                    {otherGem.region}
+                  </span>
+                  <h4 className="font-serif text-lg text-white group-hover:text-accent-blue-300 transition-colors font-sans font-bold">
+                    {otherGem.name}
+                  </h4>
+                  <p className="text-[11px] text-gray-400 font-light line-clamp-2 leading-relaxed font-sans">
+                    {otherGem.tagline}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* Right Navigation Arrow */}
+          <button
+            onClick={() => scroll('right')}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-30 w-12 h-[75%] bg-black/60 hover:bg-black/85 text-white flex items-center justify-center rounded-l-2xl border-y border-l border-accent-blue-500/15 opacity-0 group-hover/slider:opacity-100 transition-all duration-300 cursor-pointer backdrop-blur-sm"
+            aria-label="Scroll right"
+          >
+            <ChevronRight className="w-8 h-8 text-accent-blue-400 hover:text-white transition-colors" />
+          </button>
         </div>
       </section>
     </div>
