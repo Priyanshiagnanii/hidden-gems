@@ -100,8 +100,382 @@ const spotlightsData: Record<string, {
         description: "Climb the wooden steps of Pianemo Island for the iconic panoramic view of star-shaped karst islands. Conclude the tour with a beachside traditional feast under the stars."
       }
     ],
-    ecoProtection: "Raja Ampat is a Marine Protected Area (MPA). All visitors are required to pay a conservation fee, stay at eco-resorts or certified liveaboards, use reef-safe sunscreen, and strictly avoid touching or damaging the fragile coral reefs."
+    ecoProtection: "Raja Ampat is a Marine Protected Area (MPA). All visitors are required to pay a conservation fee, stay at eco-resorts or certified liveboards, use reef-safe sunscreen, and strictly avoid touching or damaging the fragile coral reefs."
+  },
+  'svalbard-northern-camp': {
+    quote: "Beneath the dancing auroral crown, the Arctic quiet speaks in whispers of ice and ancient solar winds.",
+    narrative: (
+      <>
+        <p>
+          Deep within the Arctic Circle on the Spitsbergen archipelago, Svalbard is a raw, snow-carved frontier where the wilderness rules. During the long polar nights, the sun never rises, wrapping the glaciers and mountains in a deep sapphire twilight that sets the stage for the world's most vivid auroral activity.
+        </p>
+        <p>
+          The Midnight Hearth camp features custom heated glass geodome structures designed to offer panoramic views of the polar sky. Guests can fall asleep watching the green and violet aurora curtains dance overhead, while absolute quiet envelops the frozen valleys outside.
+        </p>
+      </>
+    ),
+    itinerary: [
+      {
+        day: "Day 01",
+        title: "Polar Night Dog Sledding",
+        description: "Arrive in Longyearbyen and take an active dog sledding expedition into the Bolterdalen valley. Guide your team of huskies under the starlit sky. Settle into your luxury geodome for a warm Nordic meal."
+      },
+      {
+        day: "Day 02",
+        title: "Glacier Ice Caves Exploration",
+        description: "Embark on a snowcat trek to a massive glacier. Headlamp in hand, descend into the blue ice caves carved by summer meltwater. Spend the evening on an aurora photo safari led by professional naturalists."
+      },
+      {
+        day: "Day 03",
+        title: "Ghost Town Snowmobile Trek",
+        description: "Snowmobile across frozen fjords to the abandoned Russian mining town of Pyramiden. Savor hot drinks in the shadow of massive mountains, and return to the hearth for a final polar evening."
+      }
+    ],
+    ecoProtection: "Svalbard's high-arctic tundra is a highly fragile environment. Guests must keep to designated snowmobile tracks, use low-emission engines, respect local wildlife, and strictly follow polar bear safety boundaries."
+  },
+  'havasu-falls': {
+    quote: "A turquoise dream suspended in red sandstone, where the roar of water sings the ancient song of the Canyon.",
+    narrative: (
+      <>
+        <p>
+          Hidden within the deep canyons of Arizona, Havasu Falls is a legendary turquoise oasis located on the sovereign land of the Havasupai Tribe. The striking blue-green waters, colored by high levels of calcium carbonate, flow over massive red sandstone cliffs, creating a spectacular contrast against the desert walls.
+        </p>
+        <p>
+          Reaching Havasu Falls requires a challenging 10-mile trek down through rocky canyon walls. The reward is a secluded sanctuary of travertine pools, lush green grapevines, and the thundering sound of water falling into deep pools.
+        </p>
+      </>
+    ),
+    itinerary: [
+      {
+        day: "Day 01",
+        title: "The Sandstone Descent",
+        description: "Begin your early morning hike from Hualapai Hilltop. Walk through winding canyon paths to the remote Havasupai Village. Register with the tribal council and set up camp under cottonwood trees near the falls."
+      },
+      {
+        day: "Day 02",
+        title: "Mooney & Beaver Falls",
+        description: "Walk down the steep, cliff-face ladders to Mooney Falls. Continue trekking through the canyon floor, crossing streams and lush vegetation, to reach the tiered travertine pools of Beaver Falls. Swim and relax."
+      },
+      {
+        day: "Day 03",
+        title: "Canyon Ascent & Departure",
+        description: "Wake early for a quiet morning swim at Havasu Falls before the sun hits the valley floor. Pack up your gear and begin the challenging uphill hike back to the trailhead, or transfer via helicopter."
+      }
+    ],
+    ecoProtection: "Havasu Falls is located on Havasupai Tribal land. Visitors must strictly adhere to tribal laws, respect sacred grounds, pack out all trash, and follow a strict zero-chemical policy in the natural streams."
+  },
+  'faroe-islands': {
+    quote: "Where green-cloaked volcanic cliffs rise like giants out of the cold, churning North Atlantic spray.",
+    narrative: (
+      <>
+        <p>
+          The Faroe Islands rise like basalt fortresses out of the cold waters of the North Atlantic. This rugged archipelago is characterized by steep, green-cloaked volcanic cliffs, dramatic waterfalls emptying directly into the ocean, and deep, quiet fjords carved by ancient glaciers.
+        </p>
+        <p>
+          Due to their isolated position and stormy climate, the islands remain a pristine wilderness. Traditional turf-roofed villages sit in the valleys, and millions of seabirds, including Atlantic puffins, nest on the sheer sea cliffs.
+        </p>
+      </>
+    ),
+    itinerary: [
+      {
+        day: "Day 01",
+        title: "Gásadalur & Múlafossur",
+        description: "Arrive at Vágar Airport and drive directly to Gásadalur. Hike the old postal path over the mountain. Watch the iconic Múlafossur waterfall plunge into the ocean. Settle into a traditional turf cottage."
+      },
+      {
+        day: "Day 02",
+        title: "Mykines Bird Cliffs",
+        description: "Take a morning ferry to Mykines, the westernmost island. Hike to the lighthouse, walking among thousands of nesting puffins. Savor fresh Faroese seafood and learn about local wool-weaving traditions."
+      },
+      {
+        day: "Day 03",
+        title: "Sørvágsvatn Lake Over Ocean",
+        description: "Hike along the edge of Lake Sørvágsvatn, which appears to float hundreds of feet directly above the ocean. Walk to the steep Bøsdalafossur cliffs and take in the panoramic views of the North Atlantic."
+      }
+    ],
+    ecoProtection: "The Faroese volcanic soil is highly susceptible to erosion. All visitors must stick to designated sheep-trails, pay local conservation fees, and keep a respectful distance from nesting seabird colonies."
+  },
+  'lofoten-islands': {
+    quote: "Red fishing cabins clustered under soaring granite peaks, reflected in crystal-clear polar waters.",
+    narrative: (
+      <>
+        <p>
+          Located above the Arctic Circle in Norway, the Lofoten Islands are famous for their dramatic alpine scenery. Sheer granite mountains rise directly out of the ocean, protecting quiet, crystal-clear fjords and pristine sandy beaches.
+        </p>
+        <p>
+          Lofoten retains a strong connection to its Viking and fishing history. Red fishing cabins (rorbuer) line the harbors, and the island is filled with local art galleries, organic bakeries, and outdoor activities like climbing and sea kayaking.
+        </p>
+      </>
+    ),
+    itinerary: [
+      {
+        day: "Day 01",
+        title: "Rorbu Cabin & Reinefjord",
+        description: "Arrive in Leknes and transfer to the historic fishing village of Reine. Settle into a luxury renovated rorbu cabin. Take a quiet boat cruise through the sheer Reinefjord, admiring the granite peaks."
+      },
+      {
+        day: "Day 02",
+        title: "Reinebringen Peak Climb",
+        description: "Climb the 1,560 stone steps up to Reinebringen. Savor the panoramic views of the archipelago and the fjord below. Spend the afternoon sea kayaking along the rocky coastlines."
+      },
+      {
+        day: "Day 03",
+        title: "Haukland Beach & Bonfire",
+        description: "Hike along the white sands of Haukland Beach. Swim in the cold Arctic waters and enjoy a warm bonfire. Dine on local cod and organic ingredients at a traditional restaurant in Henningsvær."
+      }
+    ],
+    ecoProtection: "Lofoten's marine and coastal ecosystems are delicate. Visitors are required to carry out all waste, use eco-friendly sea transit, and respect local sheep-grazing zones on the beaches."
+  },
+  'plitvice-lakes': {
+    quote: "A cascading limestone labyrinth of sixteen crystal lakes, carved by moss and minerals over millennia.",
+    narrative: (
+      <>
+        <p>
+          Deep in the karst mountains of Croatia, Plitvice Lakes is a breathtaking system of 16 natural terraced lakes. The lakes are connected by a series of beautiful waterfalls and streams, carved out over thousands of years by the deposition of calcium carbonate (tufa barriers).
+        </p>
+        <p>
+          The water changes colors constantly, shifting from bright emerald green to turquoise and deep blue depending on the mineral content and sunlight. Visitors walk along wooden boardwalks that wind over the water, through lush beech and spruce forests.
+        </p>
+      </>
+    ),
+    itinerary: [
+      {
+        day: "Day 01",
+        title: "Upper Lakes Walkway",
+        description: "Arrive at the park and begin your exploration of the Upper Lakes. Walk along the wooden paths built directly over the crystal waters. Take an eco-friendly electric boat across Lake Kozjak."
+      },
+      {
+        day: "Day 02",
+        title: "Lower Lakes & Veliki Slap",
+        description: "Walk down through the limestone canyons of the Lower Lakes. Visit the massive Veliki Slap, Croatia's tallest waterfall. Explore the deep caves carved in the canyon walls and photograph the emerald pools."
+      },
+      {
+        day: "Day 03",
+        title: "Forest Trails Hike",
+        description: "Hike the quiet forest trails surrounding the lakes, looking for rare orchids and wildlife. Enjoy a traditional dinner at a local village, featuring organic honey, cheeses, and roasted meats."
+      }
+    ],
+    ecoProtection: "Plitvice Lakes is a highly sensitive tufa-forming ecosystem. To preserve the water purity and protect the fragile barriers, swimming is strictly prohibited, and visitors must stay on the wooden pathways."
+  },
+  socotra: {
+    quote: "An island lost in time, where Dragon's Blood trees stand like umbrellas against the Arabian wind.",
+    narrative: (
+      <>
+        <p>
+          Located in the Indian Ocean off the Horn of Africa, Socotra is one of the most isolated landforms on Earth. Due to millions of years of isolation, the island has developed a unique ecosystem: over a third of its plant life is found nowhere else on the planet.
+        </p>
+        <p>
+          The most famous plant is the Dragon's Blood tree, which produces a red sap and looks like a flying saucer. The island features spectacular landscapes, from sheer limestone plateaus and deep gorges to massive white sand dunes that drop into the turquoise sea.
+        </p>
+      </>
+    ),
+    itinerary: [
+      {
+        day: "Day 01",
+        title: "Homhil Dragon Forest",
+        description: "Arrive in Socotra and drive up to the Homhil Plateau. Walk through forests of Dragon's Blood and bottle trees. Swim in a natural freshwater pool overlooking the Arabian Sea."
+      },
+      {
+        day: "Day 02",
+        title: "Qalansiyah & Detwah Lagoon",
+        description: "Drive to the western tip and explore the massive Detwah Lagoon. Walk on the white sand dunes, watch stingrays glide in the shallow waters, and enjoy a traditional Bedouin dinner under the stars."
+      },
+      {
+        day: "Day 03",
+        title: "Dixam Plateau Gorge",
+        description: "Hike into the deep canyon of the Dixam Plateau. Meet local Bedouin shepherds and learn about their language and customs. Camp on the high plateau, surrounded by ancient Dragon's Blood trees."
+      }
+    ],
+    ecoProtection: "Socotra is a UNESCO World Heritage site with highly sensitive endemic flora. Visitors are strictly forbidden from collecting seeds or plants, and must camp in designated eco-camps with local guides."
+  },
+  'spiti-valley': {
+    quote: "A high-altitude desert of barren mountains, where ancient monasteries cling to crumbling cliffs.",
+    narrative: (
+      <>
+        <p>
+          High in the Himalayas of northern India, Spiti Valley is a cold desert valley surrounded by massive snow-capped mountains. The region is home to a rich Tibetan Buddhist culture, with ancient white-washed monasteries clinging to sheer cliffs.
+        </p>
+        <p>
+          The landscape is stark and beautiful, with winding rivers, deep gorges, and small villages located at altitudes above 14,000 feet. Spiti is a place of deep silence, clear starry skies, and simple, traditional mountain life.
+        </p>
+      </>
+    ),
+    itinerary: [
+      {
+        day: "Day 01",
+        title: "Ascent to Kaza & Key",
+        description: "Arrive in Kaza via the winding Spiti River road. Rest and acclimatize. Take an afternoon tour of Key Monastery, the valley's largest temple, and listen to the monks' evening prayers."
+      },
+      {
+        day: "Day 02",
+        title: "High Village Fossils Hike",
+        description: "Drive to Langza village and search for prehistoric marine fossils. Hike to Hikkim, home to the world's highest post office, and mail a postcard. Stay in a traditional homestay in Komic village."
+      },
+      {
+        day: "Day 03",
+        title: "Dhankar Monastery & Lake",
+        description: "Explore the spectacular Dhankar Monastery, built on a mud-spire cliff. Hike up to the quiet Dhankar Lake. Savor traditional momos and butter tea, and return to Kaza for departure."
+      }
+    ],
+    ecoProtection: "Spiti is a dry, high-altitude desert with limited water. Visitors must practice extreme water conservation, avoid single-use plastics, and use local homestays to support the mountain communities."
+  },
+  'deadvlei-sossusvlei': {
+    quote: "Black skeleton trees reaching like skeletal hands out of white clay, framed by the world's tallest red dunes.",
+    narrative: (
+      <>
+        <p>
+          Located inside the Namib-Naukluft National Park in Namibia, Deadvlei is a stark, white clay pan surrounded by the highest rust-red sand dunes in the world. The pan was formed when the Tsauchab River flooded, allowing camel thorn trees to grow.
+        </p>
+        <p>
+          When the climate changed and dunes blocked the river, the trees died. Today, their black skeletons remain dried and preserved by the hot desert air, standing as a beautiful, dramatic monument against the white clay and orange dunes.
+        </p>
+      </>
+    ),
+    itinerary: [
+      {
+        day: "Day 01",
+        title: "Sesriem Canyon Walk",
+        description: "Arrive at the desert lodge. Take an afternoon walk through the deep limestone walls of Sesriem Canyon. Drive into the park to watch the sunset paint Dune 45 a deep crimson color."
+      },
+      {
+        day: "Day 02",
+        title: "Big Daddy & Deadvlei",
+        description: "Wake before dawn and hike up the ridge of Big Daddy, the tallest dune in the area. Run down the sandy face into the white claypan of Deadvlei. Walk among the 900-year-old tree skeletons."
+      },
+      {
+        day: "Day 03",
+        title: "Balloon Flight over Desert",
+        description: "Take a sunrise hot air balloon flight over the Namib Sand Sea, watching the dunes roll to the Atlantic. Return to the lodge for a champagne breakfast and prepare for departure."
+      }
+    ],
+    ecoProtection: "The Namib sand crusts are ancient and fragile. Visitors must stay on designated paths in Deadvlei, avoid climbing on the historic dry camel thorn trees, and pack out all garbage."
+  },
+  'south-georgia': {
+    quote: "A wild sub-Antarctic cathedral of snow peaks, home to millions of king penguins and massive elephant seals.",
+    narrative: (
+      <>
+        <p>
+          South Georgia is a rugged sub-Antarctic island rising sharply from the Southern Ocean. It is a land of massive glaciers, active fjords, and snow-covered mountains, widely considered one of the greatest wildlife sanctuaries in the world.
+        </p>
+        <p>
+          The beaches are packed with millions of king penguins, fur seals, and giant elephant seals. The island is also famous for its history of polar exploration: it is the final resting place of the legendary explorer Sir Ernest Shackleton.
+        </p>
+      </>
+    ),
+    itinerary: [
+      {
+        day: "Day 01",
+        title: "Salisbury Plain Rookery",
+        description: "Board a zodiac to land at Salisbury Plain. Walk among a massive colony of over 250,000 king penguins. Watch elephant seal bulls fight on the black sand beach."
+      },
+      {
+        day: "Day 02",
+        title: "Grytviken Whaling Station",
+        description: "Land at the abandoned whaling station of Grytviken. Visit the local museum and the historic church. Walk to the cemetery and toast Sir Ernest Shackleton at his grave site."
+      },
+      {
+        day: "Day 03",
+        title: "Gold Harbour Glaciers",
+        description: "Cruise into Gold Harbour, where glaciers hang over green tussock grass cliffs. Take a morning zodiac cruise around icebergs, watching gentoo penguins and elephant seals play."
+      }
+    ],
+    ecoProtection: "South Georgia is an isolated sub-Antarctic sanctuary. Visitors must undergo strict bio-security checks to prevent importing invasive seeds, and maintain a 5-meter safety distance from all wildlife."
+  },
+  'scoresby-sund': {
+    quote: "Greenland's silent giant fjords, where house-sized blue icebergs drift past soaring basalt cliffs.",
+    narrative: (
+      <>
+        <p>
+          Located on the eastern coast of Greenland, Scoresby Sund is the largest and longest fjord system in the world. The fjord cuts 217 miles into the ice-covered land, surrounded by towering basalt cliffs that rise thousands of feet from the water.
+        </p>
+        <p>
+          The waters are filled with massive, deep-blue icebergs that break off from the Greenland ice sheet. This remote wilderness is home to muskoxen, seals, and narwhals, alongside the isolated Inuit village of Ittoqqortoormiit.
+        </p>
+      </>
+    ),
+    itinerary: [
+      {
+        day: "Day 01",
+        title: "Entering the Fjord System",
+        description: "Navigate your expedition ship into the mouth of Scoresby Sund. Stand on deck to watch house-sized, glowing blue icebergs drift past the towering dark basalt cliffs."
+      },
+      {
+        day: "Day 02",
+        title: "Tundra Hike & Muskoxen",
+        description: "Land at Cape Hofmann Halvø. Hike through the red and gold autumn tundra. Spot wild muskoxen grazing on the hills, and enjoy a warm lunch overlooking the icebergs."
+      },
+      {
+        day: "Day 03",
+        title: "Ittoqqortoormiit Visit",
+        description: "Visit the remote village of Ittoqqortoormiit, one of the most isolated settlements on Earth. Walk among the colorful wooden houses and learn about local hunting and dog-sledding traditions."
+      }
+    ],
+    ecoProtection: "East Greenland is a highly sensitive Arctic wilderness. Ships must use clean fuels, respect local indigenous hunting lands, and maintain strict wildlife protection guidelines."
+  },
+  'lemaire-channel': {
+    quote: "A narrow gateway of glass water, bordered by sheer walls of ice and sleeping humpback whales.",
+    narrative: (
+      <>
+        <p>
+          Located off the coast of the Antarctic Peninsula, the Lemaire Channel is a narrow, spectacular strait. Often called the 'Kodak Gap,' the channel is bordered on both sides by vertical mountains and calving glaciers that tower directly over the water.
+        </p>
+        <p>
+          The water is often completely still, reflecting the glaciers like a mirror. Humpback whales sleep in the calm bays, leopard seals rest on drifting ice floes, and thousands of penguins nest on the rocky shores.
+        </p>
+      </>
+    ),
+    itinerary: [
+      {
+        day: "Day 01",
+        title: "Entering the Kodak Gap",
+        description: "Stand on the ship's bow as it slowly navigates the narrow channel, passing close to towering ice cliffs. Look for humpback whales feeding in the cold waters."
+      },
+      {
+        day: "Day 02",
+        title: "Pleneau Bay Zodiac Cruise",
+        description: "Take a zodiac cruise through Pleneau Bay's 'iceberg graveyard.' Navigate among massive, wind-carved blue ice structures and spot leopard seals resting on the ice floes."
+      },
+      {
+        day: "Day 03",
+        title: "Petermann Island Landing",
+        description: "Land on Petermann Island. Walk up to the Gentoo penguin colony nesting on the snow-free rocks. Enjoy panoramic views of the Lemaire Channel before sailing north."
+      }
+    ],
+    ecoProtection: "Antarctica is protected by the Antarctic Treaty. All visitors must strictly adhere to IAATO rules: sanitizing boots, maintaining a 5-meter wildlife distance, and leaving absolutely no trace."
+  },
+  'antelope-canyon': {
+    quote: "Flowing sandstone waves carved by flash floods, illuminated by shafts of golden sunlight.",
+    narrative: (
+      <>
+        <p>
+          Located on Navajo Nation land in Arizona, Antelope Canyon is the most famous slot canyon in the world. Carved out over millions of years by flash floods, the canyon is characterized by flowing, wave-like sandstone structures that mimic running water.
+        </p>
+        <p>
+          At certain times of the day, shafts of sunlight shine down into the deep, narrow cracks, illuminating the orange, purple, and red canyon walls like a cathedral of light.
+        </p>
+      </>
+    ),
+    itinerary: [
+      {
+        day: "Day 01",
+        title: "Upper Antelope Canyon",
+        description: "Meet your licensed Navajo guide and ride to the canyon mouth. Walk through the flat sandy floor of the Upper Canyon. Watch the famous shafts of light pierce the dust rays."
+      },
+      {
+        day: "Day 02",
+        title: "Lower Antelope Ladders",
+        description: "Walk to Lower Antelope Canyon. Climb down the steep metal ladders into the narrow, winding sandstone slot. Marvel at the intricate textures and wave patterns in the rock walls."
+      },
+      {
+        day: "Day 03",
+        title: "Horseshoe Bend Sunset",
+        description: "Take a morning boat cruise on Lake Powell to see the water-cut sandstone cliffs. Spend the afternoon hiking to Horseshoe Bend to watch the sunset paint the Colorado River green and orange."
+      }
+    ],
+    ecoProtection: "Antelope Canyon is a sacred Navajo tribal park. Visitors are required to take guided tours with tribal guides, stay within group boundaries, and refrain from touching or drawing on the sandstone walls."
   }
+
+
 };
 
 const getSpotlightData = (gem: any) => {
@@ -343,7 +717,8 @@ export const GemOfTheWeek: React.FC = () => {
               <div
                 key={otherGem.id}
                 onClick={() => {
-                  navigate(`/explore?gem=${otherGem.id}`);
+                  navigate(`/gem-of-the-week?id=${otherGem.id}`);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
                 className="shrink-0 w-72 h-80 glass-panel glass-panel-hover rounded-2xl overflow-hidden cursor-pointer flex flex-col group relative transition-all duration-500 hover:scale-[1.05] hover:z-20 hover:shadow-2xl hover:shadow-accent-blue-500/10 hover:border-accent-blue-400/40"
               >
