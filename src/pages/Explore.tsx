@@ -13,12 +13,13 @@ export const Explore: React.FC = () => {
   // Pull search params from URL
   const querySearch = searchParams.get('search') || '';
   const queryRegion = searchParams.get('region') || '';
+  const queryExperience = searchParams.get('experience') || '';
   const queryGem = searchParams.get('gem') || '';
 
   // Local filter states
   const [searchVal, setSearchVal] = useState(querySearch);
   const [selectedRegion, setSelectedRegion] = useState(queryRegion);
-  const [selectedExperience, setSelectedExperience] = useState('');
+  const [selectedExperience, setSelectedExperience] = useState(queryExperience);
   const [selectedDifficulty, setSelectedDifficulty] = useState('');
   const [showMobileFilters, setShowMobileFilters] = useState(false);
 
@@ -29,6 +30,16 @@ export const Explore: React.FC = () => {
   useEffect(() => {
     setSearchVal(querySearch);
   }, [querySearch]);
+
+  // Update experience filter if URL parameter changes
+  useEffect(() => {
+    setSelectedExperience(queryExperience);
+  }, [queryExperience]);
+
+  // Update region filter if URL parameter changes
+  useEffect(() => {
+    setSelectedRegion(queryRegion);
+  }, [queryRegion]);
 
   // Handle URL change of "?gem=id" to open modal
   useEffect(() => {
@@ -64,6 +75,18 @@ export const Explore: React.FC = () => {
       newParams.set('region', nextVal);
     } else {
       newParams.delete('region');
+    }
+    setSearchParams(newParams);
+  };
+
+  const handleExperienceFilter = (expName: string) => {
+    const nextVal = selectedExperience === expName ? '' : expName;
+    setSelectedExperience(nextVal);
+    const newParams = new URLSearchParams(searchParams);
+    if (nextVal) {
+      newParams.set('experience', nextVal);
+    } else {
+      newParams.delete('experience');
     }
     setSearchParams(newParams);
   };
@@ -218,7 +241,7 @@ export const Explore: React.FC = () => {
                 {['Celestial', 'Antiquity', 'Marine', 'Forest', 'Volcanic'].map((exp) => (
                   <button
                     key={exp}
-                    onClick={() => setSelectedExperience(selectedExperience === exp ? '' : exp)}
+                    onClick={() => handleExperienceFilter(exp)}
                     className={`px-3 py-2 text-left rounded-lg text-xs font-sans transition-all cursor-pointer border ${
                       selectedExperience === exp
                         ? 'bg-accent-blue-600/20 border-accent-blue-500 text-white font-medium shadow-md shadow-accent-blue-950/40'

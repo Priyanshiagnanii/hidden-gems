@@ -24,7 +24,7 @@ export const Experiences: React.FC = () => {
       description: "Stargazing dome camps, northern lights viewings, and night sky photography in places with absolutely no light pollution.",
       icon: Star,
       accentColor: "text-indigo-400 border-indigo-500/20 bg-indigo-950/20",
-      bgImage: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80"
+      bgImage: "/svalbard_real.png"
     },
     {
       type: "Antiquity",
@@ -33,7 +33,7 @@ export const Experiences: React.FC = () => {
       description: "Explore ancient underground cities, cliffside tombs, and historical ruins left by old civilizations in quiet, isolated settings.",
       icon: Landmark,
       accentColor: "text-amber-400 border-amber-500/20 bg-amber-950/20",
-      bgImage: "https://images.unsplash.com/photo-1582298538104-e22e5404d7aa?auto=format&fit=crop&w=800&q=80"
+      bgImage: "/hegra_real.jpg"
     },
     {
       type: "Marine",
@@ -42,7 +42,7 @@ export const Experiences: React.FC = () => {
       description: "Take quiet boat trips through underground rivers, stone caves, and coastal waters that naturally glow in the dark.",
       icon: Compass,
       accentColor: "text-accent-blue-400 border-accent-blue-500/20 bg-accent-blue-950/20",
-      bgImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+      bgImage: "/bazaruto_real.png"
     },
     {
       type: "Forest",
@@ -51,7 +51,7 @@ export const Experiences: React.FC = () => {
       description: "Hike through towering stone needle forests, clear waterfalls, and green valleys filled with rare plants and animals.",
       icon: Trees,
       accentColor: "text-emerald-400 border-emerald-500/20 bg-emerald-950/20",
-      bgImage: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80"
+      bgImage: "/yakushima_real.png"
     },
     {
       type: "Volcanic",
@@ -60,7 +60,7 @@ export const Experiences: React.FC = () => {
       description: "Travel to amazing nature borders, like desert dunes filled with seasonal lakes, black volcanic structures, and hot springs.",
       icon: Flame,
       accentColor: "text-rose-400 border-rose-500/20 bg-rose-950/20",
-      bgImage: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80"
+      bgImage: "/deadvlei_real.png"
     }
   ];
 
@@ -128,7 +128,7 @@ export const Experiences: React.FC = () => {
                   </p>
 
                   <button
-                    onClick={() => navigate(`/explore?search=${encodeURIComponent(cat.type)}`)}
+                    onClick={() => navigate(`/explore?experience=${encodeURIComponent(cat.type)}`)}
                     className="px-6 py-3 rounded-xl border border-accent-blue-500/20 bg-accent-blue-950/20 hover:bg-accent-blue-900/40 hover:border-accent-blue-400 text-xs font-semibold uppercase tracking-widest text-accent-blue-300 flex items-center justify-center gap-2 group w-max cursor-pointer mt-4 transition-all"
                   >
                     View Destinations

@@ -16,7 +16,7 @@ export const regions: Region[] = [
     description: "From the windy sand dunes in Brazil to crystal caves in Mexico, explore beautiful natural wonders.",
     gemCount: 10,
     highlightText: "Sand dunes & crystal caves",
-    image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80"
+    image: "/havasu_falls_cover.png"
   },
   {
     id: "Europe",
