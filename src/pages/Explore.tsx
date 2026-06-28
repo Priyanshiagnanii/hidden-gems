@@ -1,10 +1,126 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, SlidersHorizontal, X, MapPin, Star, Clock, CalendarRange, Award, Hotel, Compass, Info } from 'lucide-react';
+import { Search, SlidersHorizontal, X, MapPin, Star, Clock, CalendarRange, Award, Hotel, Compass, Info, Sparkles } from 'lucide-react';
 import { destinations } from '../data/destinations';
 import type { Destination } from '../data/destinations';
 import { DestinationCard } from '../components/DestinationCard';
+
+const insiderInfo: Record<string, {
+  funFact: string;
+  rarity: number;
+  crowd: 'Isolated' | 'Minimal' | 'Moderate' | 'High';
+  adventureIndex: 'Challenging' | 'Moderate' | 'Extreme' | 'Leisurely';
+}> = {
+  trolltunga: {
+    funFact: "Trolltunga translates to 'Troll's Tongue' in Norwegian. The rock was formed during the ice age about 10,000 years ago when glacial water froze in mountain crevices and broke off large rock pieces.",
+    rarity: 88,
+    crowd: 'Moderate',
+    adventureIndex: 'Extreme'
+  },
+  'waitomo-caves': {
+    funFact: "The glowworms found in Waitomo Caves (Arachnocampa luminosa) are unique to New Zealand. Their blue-green glow is actually a chemical reaction occurring in their waste-filtering organ!",
+    rarity: 92,
+    crowd: 'Moderate',
+    adventureIndex: 'Moderate'
+  },
+  'raja-ampat': {
+    funFact: "Raja Ampat is home to 75% of the world's known coral species. Scientists believe the region's reefs are uniquely resilient to rising ocean temperatures, acting as a global seed bank.",
+    rarity: 98,
+    crowd: 'Minimal',
+    adventureIndex: 'Challenging'
+  },
+  'svalbard-northern-camp': {
+    funFact: "In Svalbard, it is legally required to carry a rifle for polar bear protection when leaving settlements. Also, dying is technically forbidden here because the permafrost prevents bodies from decomposing!",
+    rarity: 96,
+    crowd: 'Isolated',
+    adventureIndex: 'Extreme'
+  },
+  'havasu-falls': {
+    funFact: "The spectacular turquoise water color is caused by high levels of dissolved calcium carbonate (lime) which reflects sunlight. The pools are constantly changing shape as minerals build up new travertine dams.",
+    rarity: 94,
+    crowd: 'Minimal',
+    adventureIndex: 'Challenging'
+  },
+  'faroe-islands': {
+    funFact: "There are more sheep than humans on the Faroe Islands (80,000 sheep vs 54,000 humans). In fact, the islands' name itself comes from the Old Norse word 'Færeyjar,' meaning 'Sheep Islands'!",
+    rarity: 89,
+    crowd: 'Minimal',
+    adventureIndex: 'Challenging'
+  },
+  'lofoten-islands': {
+    funFact: "Lofoten has one of the world's largest deep-water coral reefs, the Røst Reef, located off its coast. Also, despite being located inside the Arctic Circle, it experiences one of the world's most elevated temperature anomalies due to the Gulf Stream.",
+    rarity: 85,
+    crowd: 'Moderate',
+    adventureIndex: 'Moderate'
+  },
+  'plitvice-lakes': {
+    funFact: "The lakes are separated by natural travertine dams created by moss, algae, and bacteria. These barriers grow by about 1 centimeter per year, meaning the waterfalls are constantly shifting and morphing over time!",
+    rarity: 82,
+    crowd: 'Moderate',
+    adventureIndex: 'Leisurely'
+  },
+  socotra: {
+    funFact: "Socotra is home to the ancient Dragon's Blood Tree, which bleeds red sap when cut. In ancient times, this red resin was highly valued for medicine, paint, and alchemy, and was rumored to be the actual blood of dragons.",
+    rarity: 99,
+    crowd: 'Isolated',
+    adventureIndex: 'Extreme'
+  },
+  'spiti-valley': {
+    funFact: "Spiti Valley's Hikkim village is home to the world's highest post office at 14,400 feet. Tourists hike up just to send letters postmarked from the top of the world!",
+    rarity: 91,
+    crowd: 'Isolated',
+    adventureIndex: 'Challenging'
+  },
+  'deadvlei-sossusvlei': {
+    funFact: "The skeletal camel thorn trees in Deadvlei died 900 years ago when the climate dried up and dunes blocked the river. The sun has scorched them completely black, but it is so dry that they cannot decompose.",
+    rarity: 93,
+    crowd: 'Minimal',
+    adventureIndex: 'Challenging'
+  },
+  'south-georgia': {
+    funFact: "South Georgia is the final resting place of explorer Sir Ernest Shackleton. The island has no permanent human residents, but hosts over 30 million breeding birds, including half of the world's king penguins.",
+    rarity: 97,
+    crowd: 'Isolated',
+    adventureIndex: 'Extreme'
+  },
+  'scoresby-sund': {
+    funFact: "Scoresby Sund is the largest fjord system on Earth, covering an area of 14,700 square miles. Icebergs here can be as tall as a 20-story building and take years to drift out of the fjord.",
+    rarity: 95,
+    crowd: 'Isolated',
+    adventureIndex: 'Extreme'
+  },
+  'lemaire-channel': {
+    funFact: "The Lemaire Channel is so narrow (only 1,600 feet at its narrowest point) that cruise ships can only navigate it when it is completely free of pack ice. It is nicknamed the 'Kodak Gap' because it is the most photographed spot in Antarctica.",
+    rarity: 90,
+    crowd: 'Minimal',
+    adventureIndex: 'Extreme'
+  },
+  'antelope-canyon': {
+    funFact: "Antelope Canyon was formed over thousands of years by water erosion from flash floods rushing through the Navajo sandstone. It is considered sacred by the Navajo people, who enter the canyon in a prayerful state of mind.",
+    rarity: 87,
+    crowd: 'Moderate',
+    adventureIndex: 'Leisurely'
+  },
+  'salvation-mountain': {
+    funFact: "Salvation Mountain is a massive folk-art installation built entirely from local adobe clay, straw, and thousands of gallons of lead-free paint. Its creator, Leonard Knight, lived in his truck at the site for over 25 years without running water or electricity.",
+    rarity: 86,
+    crowd: 'Minimal',
+    adventureIndex: 'Leisurely'
+  }
+};
+
+const getInsiderData = (id: string) => {
+  if (insiderInfo[id]) {
+    return insiderInfo[id];
+  }
+  return {
+    funFact: "This hidden gem remains largely untouched by mainstream tourism. Exploring it offers travelers a rare opportunity to connect with pure, authentic natural wonders and preserve regional heritage.",
+    rarity: 78,
+    crowd: 'Minimal' as const,
+    adventureIndex: 'Moderate' as const
+  };
+};
 
 export const Explore: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -390,6 +506,73 @@ export const Explore: React.FC = () => {
                           </li>
                         ))}
                       </ul>
+                    </div>
+
+                    {/* EXPEDITION INSIDER TRIVIA & GAUGES */}
+                    <div className="flex flex-col gap-5 pt-5 border-t border-accent-blue-500/10 font-sans">
+                      {/* Fun Fact Section */}
+                      <div className="glass-panel p-4.5 rounded-2xl border-amber-500/15 bg-amber-950/5 relative overflow-hidden flex gap-3.5 items-start">
+                        <Sparkles className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+                        <div className="flex flex-col gap-1 z-10">
+                          <span className="text-[10px] tracking-wider uppercase text-amber-400 font-bold">
+                            Did You Know?
+                          </span>
+                          <p className="text-[11px] text-gray-300 leading-relaxed font-light font-sans">
+                            {getInsiderData(activeGem.id).funFact}
+                          </p>
+                        </div>
+                        {/* Glow effect */}
+                        <div className="absolute -top-10 -right-10 w-24 h-24 bg-amber-500/5 rounded-full blur-xl" />
+                      </div>
+
+                      {/* Rarity and Crowd Gauges */}
+                      <div className="grid grid-cols-2 gap-4">
+                        {/* Rarity Meter */}
+                        <div className="bg-black/25 border border-accent-blue-500/5 rounded-xl p-3 flex flex-col gap-2">
+                          <div className="flex justify-between items-center text-[10px] text-gray-400">
+                            <span className="font-semibold uppercase tracking-wider">Rarity Index</span>
+                            <span className="text-accent-blue-400 font-bold">{getInsiderData(activeGem.id).rarity}%</span>
+                          </div>
+                          {/* Progress bar */}
+                          <div className="w-full h-1.5 bg-black/45 rounded-full overflow-hidden">
+                            <div 
+                              className="h-full bg-gradient-to-r from-accent-blue-500 to-accent-blue-400 rounded-full" 
+                              style={{ width: `${getInsiderData(activeGem.id).rarity}%` }}
+                            />
+                          </div>
+                        </div>
+
+                        {/* Crowd Density Meter */}
+                        <div className="bg-black/25 border border-accent-blue-500/5 rounded-xl p-3 flex flex-col gap-2">
+                          <div className="flex justify-between items-center text-[10px] text-gray-400">
+                            <span className="font-semibold uppercase tracking-wider">Crowd Density</span>
+                            <span className="text-emerald-400 font-bold">{getInsiderData(activeGem.id).crowd}</span>
+                          </div>
+                          {/* Indicator dots */}
+                          <div className="flex gap-1.5 items-center mt-1">
+                            {['Isolated', 'Minimal', 'Moderate', 'High'].map((lvl) => {
+                              const isActive = getInsiderData(activeGem.id).crowd === lvl;
+                              const colors = {
+                                Isolated: 'bg-indigo-500 border-indigo-400',
+                                Minimal: 'bg-emerald-500 border-emerald-400',
+                                Moderate: 'bg-amber-500 border-amber-400',
+                                High: 'bg-rose-500 border-rose-400'
+                              };
+                              return (
+                                <div 
+                                  key={lvl} 
+                                  className={`h-2.5 rounded-full transition-all duration-300 ${
+                                    isActive 
+                                      ? `w-6 ${colors[lvl]} opacity-100 shadow-md shadow-emerald-500/10` 
+                                      : 'w-2.5 bg-gray-700/60 opacity-30'
+                                  }`} 
+                                  title={lvl}
+                                />
+                              );
+                            })}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
