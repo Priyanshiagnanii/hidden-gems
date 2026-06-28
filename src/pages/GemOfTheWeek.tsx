@@ -192,7 +192,7 @@ export const GemOfTheWeek: React.FC = () => {
         <div className="flex flex-wrap items-center justify-between gap-6 border-b border-accent-blue-500/10 pb-8 mb-12 text-xs font-sans text-gray-500">
           <div className="flex items-center gap-2">
             <img
-              src="https://images.unsplash.com/photo-1607990283143-e81e7a2c93ab?auto=format&fit=crop&w=80&q=80"
+              src="/aarav_sharma.png"
               alt="Aarav Sharma"
               className="w-10 h-10 rounded-full object-cover border border-accent-blue-500/20"
             />
