@@ -6,7 +6,6 @@ import { regions } from '../data/regions';
 import { destinations } from '../data/destinations';
 import { testimonials } from '../data/testimonials';
 import { DestinationCard } from '../components/DestinationCard';
-import { Newsletter } from '../components/Newsletter';
 
 export const Home: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -374,11 +373,6 @@ export const Home: React.FC = () => {
             </button>
           </div>
         </div>
-      </section>
-
-      {/* 6. NEWSLETTER SUBSCRIPTION */}
-      <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto mb-12">
-        <Newsletter />
       </section>
     </div>
   );
