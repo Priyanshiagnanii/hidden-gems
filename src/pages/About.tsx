@@ -38,8 +38,8 @@ export const About: React.FC = () => {
           <h1 className="font-serif text-4xl md:text-6xl font-bold leading-tight">
             Our <span className="blue-gradient-text">Story</span>
           </h1>
-          <p className="text-gray-400 font-light text-sm max-w-xl leading-relaxed mt-2">
-            Hidden Gems was started to solve a simple problem: the more beautiful a place is, the more tourist crowds can ruin its natural environment.
+          <p className="text-gray-400 font-light text-sm max-w-2xl leading-relaxed mt-2">
+            Hidden Gems was founded to solve a simple problem: as destinations become more popular, their natural beauty and cultural heritage often suffer from overtourism. We help travelers discover extraordinary places while promoting responsible exploration.
           </p>
         </div>
 
@@ -47,8 +47,8 @@ export const About: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-20">
           <div className="relative rounded-3xl overflow-hidden aspect-[4/3] border border-accent-blue-500/10 shadow-2xl">
             <img
-              src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80"
-              alt="Silent Forest Canopy"
+              src="/about_story_cover.png"
+              alt="Responsible Wilderness Exploration"
               className="w-full h-full object-cover brightness-[0.7]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-dark-bg/85 via-transparent to-transparent" />
