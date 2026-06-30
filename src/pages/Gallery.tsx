@@ -16,7 +16,7 @@ export const Gallery: React.FC = () => {
   const [activePhotoIdx, setActivePhotoIdx] = useState<number | null>(null);
 
   // Flatten the image array from destinations
-  const photosList: GalleryItem[] = destinations.reduce<GalleryItem[]>((acc, dest) => {
+  const allPhotos: GalleryItem[] = destinations.reduce<GalleryItem[]>((acc, dest) => {
     // Principal image
     acc.push({
       id: dest.id,
@@ -35,6 +35,15 @@ export const Gallery: React.FC = () => {
     });
     return acc;
   }, []);
+
+  // Deduplicate by URL so each photo appears only once
+  const seenUrls = new Set<string>();
+  const photosList = allPhotos.filter((item) => {
+    if (!item.url) return false;
+    const isDuplicate = seenUrls.has(item.url);
+    seenUrls.add(item.url);
+    return !isDuplicate;
+  });
 
   const handleNextPhoto = (e: React.MouseEvent) => {
     e.stopPropagation();
