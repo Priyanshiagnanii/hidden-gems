@@ -303,7 +303,7 @@ export const destinations: Destination[] = [
     image: "/cumberland_cover.png",
     galleryImages: [
       "/cumberland_cover.png",
-      "/cumberland_real.png"
+      "/cumberland_real.jpg"
     ],
     bestTime: "October to April",
     highlights: [
@@ -489,7 +489,7 @@ export const destinations: Destination[] = [
     image: "/cape_may_real.jpg",
     galleryImages: [
       "/cape_may_cover.png",
-      "/cape_may_real.png"
+      "/cape_may_real.jpg"
     ],
     bestTime: "May to September",
     highlights: [

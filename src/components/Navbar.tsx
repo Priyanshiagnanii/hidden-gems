@@ -35,7 +35,6 @@ export const Navbar: React.FC = () => {
     { name: 'Gallery', path: '/gallery', icon: ImageIcon },
     { name: 'Blog', path: '/blog', icon: BookOpen },
     { name: 'About', path: '/about', icon: Info },
-    { name: 'Contact', path: '/contact', icon: Mail },
   ];
 
   return (
@@ -53,9 +52,12 @@ export const Navbar: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="relative w-9 h-9 flex items-center justify-center rounded-full border border-accent-blue-500/40 bg-accent-blue-950/20 group-hover:border-accent-blue-400 transition-all duration-300">
-              <span className="font-serif text-lg font-bold blue-gradient-text">H</span>
-              <div className="absolute inset-0 rounded-full border border-accent-blue-400/0 group-hover:border-accent-blue-400/40 group-hover:scale-110 transition-all duration-300" />
+            <div className="relative w-9 h-9 flex items-center justify-center rounded-full border border-accent-blue-500/40 bg-accent-blue-950/20 group-hover:border-accent-blue-400 transition-all duration-300 overflow-hidden">
+              <img
+                src="/logo.jpg"
+                alt="Hidden Gems Logo"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-serif tracking-[0.2em] text-lg font-bold text-white group-hover:text-accent-blue-300 transition-colors duration-300">

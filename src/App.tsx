@@ -13,7 +13,6 @@ import { GemOfTheWeek } from './pages/GemOfTheWeek';
 import { Gallery } from './pages/Gallery';
 import { Blog } from './pages/Blog';
 import { About } from './pages/About';
-import { Contact } from './pages/Contact';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { TermsConditions } from './pages/TermsConditions';
 import { EcoPledge } from './pages/EcoPledge';
@@ -46,7 +45,6 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-conditions" element={<TermsConditions />} />
             <Route path="/eco-pledge" element={<EcoPledge />} />

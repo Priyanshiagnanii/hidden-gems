@@ -33,10 +33,14 @@ export const Footer: React.FC = () => {
         {/* Brand Block */}
         <div className="flex flex-col gap-6">
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-8 h-8 flex items-center justify-center rounded-full border border-accent-blue-500/40 bg-accent-blue-950/20">
-              <span className="font-serif text-sm font-bold blue-gradient-text">H</span>
+            <div className="w-8 h-8 flex items-center justify-center rounded-full border border-accent-blue-500/40 bg-accent-blue-950/20 overflow-hidden">
+              <img
+                src="/logo.jpg"
+                alt="Hidden Gems Logo"
+                className="w-full h-full object-cover"
+              />
             </div>
-            <span className="font-serif tracking-[0.2em] text-md font-bold text-white">
+            <span className="font-serif tracking-[0.2em] text-md font-bold text-white group-hover:text-accent-blue-300 transition-colors duration-300">
               HIDDEN GEMS
             </span>
           </Link>
@@ -74,7 +78,6 @@ export const Footer: React.FC = () => {
             <li><Link to="/blog" className="hover:text-accent-blue-400 transition-colors">Travel Blog</Link></li>
             <li><Link to="/about" className="hover:text-accent-blue-400 transition-colors">Our Story & Philosophy</Link></li>
             <li><Link to="/about" className="hover:text-accent-blue-400 transition-colors">Eco Commitment</Link></li>
-            <li><Link to="/contact" className="hover:text-accent-blue-400 transition-colors">Plan Your Trip</Link></li>
             <li><a href="#" className="hover:text-accent-blue-400 transition-colors">Press & Media</a></li>
           </ul>
         </div>
