@@ -23,11 +23,11 @@ export const blogPosts: BlogPost[] = [
     date: "June 12, 2026",
     readTime: "6 Min Read",
     author: {
-      name: "Marcus Vance",
-      role: "Editor-in-Chief",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80"
+      name: "Aarav Sharma",
+      role: "Travel Reporter",
+      avatar: "/aarav_sharma.png"
     },
-    image: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80",
+    image: "/sustainable_luxury_blog.png",
     tags: ["Conservation", "Luxury Travel", "Ethics"]
   },
   {
@@ -38,11 +38,11 @@ export const blogPosts: BlogPost[] = [
     date: "May 28, 2026",
     readTime: "8 Min Read",
     author: {
-      name: "Evelyn Thorne",
+      name: "Priya Patel",
       role: "Expedition Photographer",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+      avatar: "/priya_patel.png"
     },
-    image: "https://images.unsplash.com/photo-1517783999520-f068d7431a60?auto=format&fit=crop&w=800&q=80",
+    image: "/astrophotography_blog.png",
     tags: ["Photography", "Astrophotography", "Gear"]
   },
   {
@@ -53,11 +53,11 @@ export const blogPosts: BlogPost[] = [
     date: "April 15, 2026",
     readTime: "10 Min Read",
     author: {
-      name: "Dr. Alistair Croft",
-      role: "Historical Consultant",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+      name: "Karan Malhotra",
+      role: "Lead Expedition Guide",
+      avatar: "/karan_malhotra.png"
     },
-    image: "https://images.unsplash.com/photo-1582298538104-e22e5404d7aa?auto=format&fit=crop&w=800&q=80",
+    image: "/hegra_real.jpg",
     tags: ["History", "Archaeology", "AlUla"]
   }
 ];

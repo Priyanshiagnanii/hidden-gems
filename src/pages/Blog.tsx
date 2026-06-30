@@ -88,7 +88,7 @@ export const Blog: React.FC = () => {
                 </div>
                 
                 <div className="text-xs font-semibold uppercase tracking-wider text-accent-blue-400 group-hover:text-accent-blue-300 transition-colors flex items-center gap-1">
-                  Read Story
+                  Explore Dispatch
                   <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                 </div>
               </div>
@@ -164,7 +164,7 @@ export const Blog: React.FC = () => {
                   </div>
 
                   <span className="text-[10px] uppercase font-bold tracking-wider text-accent-blue-400 group-hover:text-accent-blue-200 transition-colors flex items-center gap-0.5">
-                    Read Story
+                    Explore Dispatch
                     <ChevronRight className="w-3.5 h-3.5" />
                   </span>
                 </div>
@@ -265,11 +265,11 @@ export const Blog: React.FC = () => {
                 <div className="flex justify-between items-center pt-8 border-t border-accent-blue-500/10 mt-12">
                   <span className="text-[10px] tracking-wider text-gray-500 uppercase flex items-center gap-1 font-sans">
                     <CornerDownRight className="w-3.5 h-3.5 text-accent-blue-500/40" />
-                    End of Article
+                    End of Dispatch
                   </span>
                   <button className="flex items-center gap-1.5 text-xs font-semibold text-accent-blue-400 hover:text-accent-blue-300 font-sans cursor-pointer">
                     <Share2 className="w-4 h-4" />
-                    Share Article
+                    Share Dispatch
                   </button>
                 </div>
               </div>
