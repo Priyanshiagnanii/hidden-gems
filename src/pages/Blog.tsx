@@ -1,11 +1,34 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Calendar, Clock, X, ChevronRight, Share2, CornerDownRight } from 'lucide-react';
+import { Calendar, Clock, X, ChevronRight, Share2, CornerDownRight, Check } from 'lucide-react';
 import { blogPosts } from '../data/blog';
 import type { BlogPost } from '../data/blog';
 
 export const Blog: React.FC = () => {
   const [activePost, setActivePost] = useState<BlogPost | null>(null);
+  const [toast, setToast] = useState<string | null>(null);
+
+  const handleShare = (post: BlogPost) => {
+    const shareData = {
+      title: post.title,
+      text: post.excerpt,
+      url: window.location.href
+    };
+    
+    if (navigator.share) {
+      navigator.share(shareData)
+        .catch((error) => console.log('Error sharing:', error));
+    } else {
+      navigator.clipboard.writeText(window.location.href)
+        .then(() => {
+          setToast("Link copied to clipboard!");
+          setTimeout(() => setToast(null), 3000);
+        })
+        .catch((err) => {
+          console.error('Failed to copy text: ', err);
+        });
+    }
+  };
 
   // First post is featured
   const featuredPost = blogPosts[0];
@@ -267,13 +290,30 @@ export const Blog: React.FC = () => {
                     <CornerDownRight className="w-3.5 h-3.5 text-accent-blue-500/40" />
                     End of Dispatch
                   </span>
-                  <button className="flex items-center gap-1.5 text-xs font-semibold text-accent-blue-400 hover:text-accent-blue-300 font-sans cursor-pointer">
+                  <button 
+                    onClick={() => handleShare(activePost)}
+                    className="flex items-center gap-1.5 text-xs font-semibold text-accent-blue-400 hover:text-accent-blue-300 font-sans cursor-pointer active:scale-95 transition-transform"
+                  >
                     <Share2 className="w-4 h-4" />
                     Share Dispatch
                   </button>
                 </div>
               </div>
             </motion.article>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {toast && (
+          <motion.div
+            initial={{ opacity: 0, y: 30, x: '-50%' }}
+            animate={{ opacity: 1, y: 0, x: '-50%' }}
+            exit={{ opacity: 0, y: 30, x: '-50%' }}
+            className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 bg-accent-blue-600/90 text-white font-sans text-xs md:text-sm font-semibold py-3 px-6 rounded-full shadow-lg border border-accent-blue-400/25 flex items-center gap-2 backdrop-blur-md"
+          >
+            <Check className="w-4 h-4 text-emerald-400" />
+            {toast}
           </motion.div>
         )}
       </AnimatePresence>
